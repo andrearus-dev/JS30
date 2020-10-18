@@ -87,6 +87,7 @@
 
     .panel.open {
       font-size: 40px;
+      flex: 5;
     }
 
   </style>
@@ -121,6 +122,11 @@
   </div>
 
   <script>
+    const panels = document.querySelectorAll('.panels'); 
+
+    function toggleOpen() {
+        this.classList.toggle('.open');
+    }
 
   </script>
 
