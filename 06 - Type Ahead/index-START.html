@@ -18,6 +18,7 @@
 const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
 
 const cities = [];
+const log = console.log; //shortcut 
 
 fetch(endpoint)
   .then(blob => blob.json())
@@ -32,27 +33,20 @@ fetch(endpoint)
     });
   }
 
-const log = console.log; //shortcut 
+  function displayMatches() {
+    const matchArray = findMatches(this.value, cities);
+    log(matchArray);
+  }
 
-let app = null;
+  const searchInput = document.querySelector('.search');
+  const suggestions = document.querySelector('.suggestions');
 
- app = (function() {
-    return {
-      buybeer: function(money) {
-        if(money >= 3) {
-          log(`your change is ${money - 3} and here is your beer`);
-          return true;
-      }
-      }
-}})();
+  searchInput.addEventListener('change', displayMatches);
+  searchInput.addEventListener('keyup', displayMatches);
 
-let hadEnough = app.buybeer(5);
 
-if(hadEnough) {
-  log('they had enough');
-} else {
-  log('they did not have enough');
-}
+
+
 
 
  
