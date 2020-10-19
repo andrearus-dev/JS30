@@ -36,20 +36,23 @@ const log = console.log; //shortcut
 
 let app = null;
 
- app = (function(){
+ app = (function() {
     return {
       buybeer: function(money) {
         if(money >= 3) {
           log(`your change is ${money - 3} and here is your beer`);
-          return money - 3;
-        } else {
-          return money;
-        }
+          return true;
       }
-    }
-})();
+      }
+}})();
 
-app.buybeer(5);
+let hadEnough = app.buybeer(5);
+
+if(hadEnough) {
+  log('they had enough');
+} else {
+  log('they did not have enough');
+}
 
 
  
