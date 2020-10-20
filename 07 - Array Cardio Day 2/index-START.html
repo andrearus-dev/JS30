@@ -30,11 +30,10 @@
 
     const isAdult = people.some(function(person) {
       const currentYear = (new Date()).getFullYear();
-      if (currentYear - person.year >= 19) {
-        return true;
-      }
-      console.log(currentYear);
+      return currentYear - person.year >= 19;
     });
+
+    console.log(isAdult);
 
     isAdult;
 
