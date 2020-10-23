@@ -52,19 +52,22 @@
 
     // clearing
 
-    // console.clear();
+     console.clear();
 
-
-
+  
 
     // Viewing DOM Elements
 
     console.log(p);
-    console.dir(p);
-
-
+    // console.dir(p);
 
     // Grouping together
+
+    dogs.forEach(dog => {
+      console.group( `${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.groupEnd(`${dog.name}`);
+    })
 
     // counting
 
