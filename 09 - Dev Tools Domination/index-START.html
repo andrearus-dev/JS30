@@ -64,15 +64,19 @@
     // Grouping together
 
     dogs.forEach(dog => {
-      console.group( `${dog.name}`);
+      console.groupCollapsed( `${dog.name}`);
       console.log(`This is ${dog.name}`);
       console.groupEnd(`${dog.name}`);
     })
 
     // counting
 
-    // timing
+    console.count();
 
+    // timing - how long it takes to do something 
+    //eg fetching data frim github
+
+    console.time();
   </script>
 </body>
 </html>
