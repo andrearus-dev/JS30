@@ -96,6 +96,18 @@
   </div>
 
 <script>
+
+  const inboxItem = document.querySelectorAll('.inbox input');
+
+  function checkItems(item) {
+    inboxItem.addEventListener('click'), () => {
+      if(e.target.shiftkey) {
+        e.target.classList.add('line-through');
+      } else {
+        return false;
+      }
+    }}; 
+    
 </script>
 </body>
 </html>
