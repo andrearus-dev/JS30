@@ -97,16 +97,9 @@
 
 <script>
 
-  const inboxItem = document.querySelectorAll('.inbox input');
+  const checkboxes = document.querySelectorAll('.inbox input[type = "checkbox"]');
 
-  function checkItems(item) {
-    inboxItem.addEventListener('click'), () => {
-      if(e.target.shiftkey) {
-        e.target.classList.add('line-through');
-      } else {
-        return false;
-      }
-    }}; 
+checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
     
 </script>
 </body>
