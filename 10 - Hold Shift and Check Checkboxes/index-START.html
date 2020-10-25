@@ -107,16 +107,16 @@
     let inBetween = false;
 
     if(e.shiftkey && this.checked) {
-      checkboxes.forEach(checkbox => {
-        console.log(checkbox);
+      checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+    
       });
-    }
+  }
+    
 
     lastChecked = this;
-  }
 
-checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
-    
+
+
 </script>
 </body>
 </html>
