@@ -19,3 +19,6 @@ function togglePlat() {
 }
 
 //hook up to event listeners
+
+video.addEventListener('click', togglePlay);
+toggle.addEventListener('click', togglePlay);
