@@ -31,6 +31,9 @@ function skip() {
   video[this.name] = this.value;
 }
 
+function handleProgress() {
+  const percent = (video.currentTime / video.duration) * 100;
+
 
 //hook up to event listeners
 
