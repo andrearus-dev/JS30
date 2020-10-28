@@ -33,6 +33,8 @@ function skip() {
 
 function handleProgress() {
   const percent = (video.currentTime / video.duration) * 100;
+  progressBar.style.flexBasis = `${percent}%`;
+}
 
 
 //hook up to event listeners
