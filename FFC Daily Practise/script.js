@@ -25,3 +25,15 @@ function multiplyAll(array) {
 
 var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
 log(product);
+
+
+//RECURSIONS - base case / recursive case 
+
+function factorial(n) {
+  if (n == 1 || n == 0) {
+    return 1;
+  return n * factorial(n - 1) 
+}
+
+console.log(factorial(4))
+
