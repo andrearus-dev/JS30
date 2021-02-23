@@ -38,3 +38,12 @@ function factorial(n) {
 
 console.log(factorial(4));
 
+function sum(arr, n) {
+  if(n <= 0) { 
+    return 0;
+  } else {
+    return sum(arr, n - 1);
+  }
+}
+
+console.log
