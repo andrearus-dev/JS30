@@ -46,12 +46,13 @@ function sum(arr, n) {
   }
 }
 
-function multiply(arr, n) {
-  var product = 1;
-  for (var i = 0; i < n; i++) {
-    product *= arr[i];
-  }
-  return product;
+var loop = [2,3,4,5];
+
+function runLoop() {
+for (var i = 0; i < loop.length; i++) {
+    loop *= loop[i];
+}
 }
 
 
+console.log(runLoop);
