@@ -88,3 +88,20 @@ function lookUpProfile(name, prop) {
 
 var data = lookUpProfile("Harry","number");
 console.log(data);
+
+
+//loop
+
+var fruits = ["banana", "pear", "apples"];
+
+function fruitLookUp(name) {
+
+  for( var i = 0; i < fruits.length; i++) {
+    if(fruits[i++] === name) {
+      return "eat your damn fruit";
+    } 
+  }
+}
+
+var eat = fruitLookUp("banana"); 
+console.log(eat);
